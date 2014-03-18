@@ -1,0 +1,20 @@
+Run sample data using the following commands (while in the same folder as diffex_inputformat.r, and in the R statistical programming language)
+
+
+#ALL WEIGHTINGS INCLUDING LENGTH
+
+#for integer (rounded) data
+roundedinputs <- diffex.inputformat(filename="formatted_readcounts_subsyshier.txt",aldex=TRUE,shotgun=TRUE,deseq2=TRUE,noweight=TRUE,lengthweight=TRUE,lengthweightx1000=TRUE,Aitchison=TRUE,rounded=TRUE)
+
+#for non-rounded data
+nonroundedinputs <- diffex.inputformat(filename="formatted_readcounts_subsyshier.txt",aldex=TRUE,shotgun=TRUE,deseq2=TRUE,noweight=TRUE,lengthweight=TRUE,lengthweightx1000=TRUE,Aitchison=TRUE,rounded=FALSE)
+
+
+
+#NO LENGTH WEIGHTING (no length column in input)
+
+#for integer (rounded) data
+roundedinputs <- diffex.inputformat(filename="formatted_no_length_readcounts_subsyshier.txt",aldex=TRUE,shotgun=TRUE,deseq2=TRUE,noweight=TRUE,Aitchison=TRUE,rounded=TRUE)
+
+#for non-rounded data
+nonroundedinputs <- diffex.inputformat(filename="formatted_no_length_readcounts_subsyshier.txt",aldex=TRUE,shotgun=TRUE,deseq2=TRUE,noweight=TRUE,Aitchison=TRUE,rounded=FALSE)
